@@ -6285,3 +6285,6 @@ html[data-useragent*='MSIE 10.0'] .panel {
   left: 300px;
   width: calc(100%-300px);
   padding-top: 3rem; }
+
+.active {
+  color: red; }

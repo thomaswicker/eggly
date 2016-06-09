@@ -28,8 +28,13 @@ angular.module('Eggly', [
       $scope.currentCategory = category;
     }
 
+    function isCurrentCategory(category) {
+      return $scope.currentCategory !== null && category.name === $scope.currentCategory.name;
+    }
+
     // Making setCurrentCategory visible to the view or 'public'
     // Otherwise the setCurrentCategory function is not available publicly
     $scope.setCurrentCategory = setCurrentCategory;
+    $scope.isCurrentCategory = isCurrentCategory;
 })
 ;

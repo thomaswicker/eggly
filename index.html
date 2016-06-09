@@ -16,9 +16,9 @@
         <h2>Categories</h2>
         <div class='row'>
           <ul class='nav nav-sidebar'>
-            <li class='medium-12 columns' ng-repeat='category in categories'>
+            <li class='medium-12 columns' ng-class="{'active':isCurrentCategory(category)}" ng-repeat='category in categories'>
               <a ng-click='setCurrentCategory(category)'>
-                {{category.name}}
+                {{category.name
               </a>
             </li>
           </ul>
