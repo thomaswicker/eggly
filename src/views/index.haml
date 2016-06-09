@@ -8,23 +8,29 @@
   %body{"ng-controller" => "MainCtrl"}
     %h1
       {{hello}}
+
     .row
-    
       .medium-3.columns.eggly-left-sidebar
         %h2 Categories
         .row
           %ul.nav.nav-sidebar
             %li.medium-12.columns{ "ng-repeat" => "category in categories", "ng-class" => "{'active':isCurrentCategory(category)}"}
               %a{ "ng-click" => "setCurrentCategory(category)" }
-                {{category.name
+                {{category.name}}
 
       .medium-9.columns.eggly-right-body
-        %section.medium-12.columns{ "ng-repeat" => "bookmark in bookmarks | filter:{category:currentCategory.name}"}
+        %section.medium-12.columns{ "ng-repeat" => "bookmark in bookmarks | filter:{category:currentCategory.name}" }
           %button.close.button{type: "button"} &times;
           %button.btn.button.success{type: "button"} Bookmark
           %a{ href: "{{bookmark.url}}" }
             {{bookmark.title}}
 
+    .row
+      .medium-12
+        %a{"ng-if" => "shouldShowCreating()", :type => "button", :class => "button button-danger"}
+          Create Bookmark
+        %a{"ng-if" => "shouldShowEditing()", :type => "button", :class => "button button-danger"}
+          Editing Bookmark
     / SCRIPTS
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js"}

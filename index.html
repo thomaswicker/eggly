@@ -18,7 +18,7 @@
           <ul class='nav nav-sidebar'>
             <li class='medium-12 columns' ng-class="{'active':isCurrentCategory(category)}" ng-repeat='category in categories'>
               <a ng-click='setCurrentCategory(category)'>
-                {{category.name
+                {{category.name}}
               </a>
             </li>
           </ul>
@@ -32,6 +32,16 @@
             {{bookmark.title}}
           </a>
         </section>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='medium-12'>
+        <a class='button button-danger' ng-if='shouldShowCreating()' type='button'>
+          Create Bookmark
+        </a>
+        <a class='button button-danger' ng-if='shouldShowEditing()' type='button'>
+          Editing Bookmark
+        </a>
       </div>
     </div>
     <!-- SCRIPTS -->
