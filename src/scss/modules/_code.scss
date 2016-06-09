@@ -1,0 +1,117 @@
+@import '../global/mixins.scss';
+@import '../global/vars.scss';
+
+/*
+   ____ ___  ____  _____ 
+  / ___/ _ \|  _ \| ____|
+ | |  | | | | | | |  _|  
+ | |__| |_| | |_| | |___ 
+  \____\___/|____/|_____|
+                                                                                                                                                                                                                                                               
+*/
+
+code, .code {
+    width: 100%;
+    display: block;
+    line-height: 1.4em;
+    color: $medium-gray;
+    border: 1px solid lighten($color-primary, 10%);
+    background-color: lighten($color-primary, 50%);
+    letter-spacing: normal;
+    font-family: $font-1;
+    font-weight: $font-weight-normal;
+    font-size: 1rem;
+    margin: .5em 0em 1.2em 0em;
+    padding: 1em 1.5em 1em 1.5em;
+
+    span {
+        display: inline-block;
+        color: darken($color-primary, 18%);
+        padding: 1px 4px 1px 4px;
+        font-weight: 700;
+        font-family: $font-1;
+
+        &.tabspace0 {
+            margin-left: 0px;
+        }
+
+        &.tabspace1 {
+            margin-left: 20px;
+        }
+
+        &.tabspace2 {
+            margin-left: 40px;
+        }
+
+        &.tabspace3 {
+            margin-left: 60px;
+        }
+
+        &.tabspace4 {
+            margin-left: 80px;
+        }
+
+        &.tabspace5 {
+            margin-left: 100px;
+        }
+
+        &.tabspace6 {
+            margin-left: 120px;
+        }
+    }
+
+    p {
+        color: $medium-gray !important;
+
+        &.tabspace0 {
+            margin-left: 0px;
+        }
+
+        &.tabspace1 {
+            margin-left: 20px;
+        }
+
+        &.tabspace2 {
+            margin-left: 40px;
+        }
+
+        &.tabspace3 {
+            margin-left: 60px;
+        }
+
+        &.tabspace4 {
+            margin-left: 80px;
+        }
+
+        &.tabspace5 {
+            margin-left: 100px;
+        }
+
+        &.tabspace6 {
+            margin-left: 120px;
+        }
+    }
+}
+
+.highlight {
+    display: inline-block;
+    color: $white;
+    background-color: $light-gray;
+    padding: 1px 4px 1px 4px;
+    font-weight: 500;
+    font-family: $font-1;
+
+    &.primary {
+        background-color: $color-primary;   
+    }
+
+    &.secondary {
+        background-color: $color-secondary;   
+    }
+
+    &.wide {
+        padding: 5px 8px 5px 8px;
+    }
+}
+
+

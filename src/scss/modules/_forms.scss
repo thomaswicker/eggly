@@ -1,0 +1,186 @@
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+/*
+  _____ ___  ____  __  __ ____  
+ |  ___/ _ \|  _ \|  \/  / ___| 
+ | |_ | | | | |_) | |\/| \___ \ 
+ |  _|| |_| |  _ <| |  | |___) |
+ |_|   \___/|_| \_\_|  |_|____/ 
+                                                                                                                                                 
+*/
+
+
+/* ==========================================================================
+   Styling for Forms
+   ========================================================================== 
+*/
+
+legend.form-control {
+  padding: 0;
+  border: 0;
+}
+
+label.form-control {
+  @include font($font: $font-2, $style: normal, $size: .95rem, $weight: normal);
+	display: block;
+	width: 100%;
+	padding-bottom: 6px;
+	text-transform: uppercase;
+	color: $dark-gray;
+	margin-top: 15px;
+}
+
+input.form-control {
+	width: 92%;
+	padding: 12px 15px 12px 15px;
+	color: $medium-gray;
+	height: auto;
+  @include font($font: $font-2, $style: normal, $size: .9rem, $weight: normal);
+  border: 1px solid lighten($color-primary, 15%);
+
+  @include mq(md) {
+    width: 100%;
+  }
+
+  @include mq(sm) {
+    width: 100%;
+  }
+}
+
+select.form-control {
+	width: 92%;
+	height: 45px;
+	padding-left: 15px;
+	color: $medium-gray;
+  @include font($font: $font-2, $style: normal, $size: .9rem, $weight: normal);  border: 1px solid $light-gray;
+  background-color: $white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0px;
+  border: 1px solid lighten($color-primary, 15%);
+  background-image: url("http://www.getpotion.com/img/select-box-arrow.svg");
+	background-position: 97% 50%;
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+
+  @include mq(md) {
+    width: 100%;
+  }
+
+  @include mq(sm) {
+    width: 100%;
+  }
+}
+
+textarea.form-control {
+	width: 96%;
+	min-height: 100px;
+	padding: 22px 15px 22px 15px;
+  @include font($font: $font-2, $style: normal, $size: .9rem, $weight: normal);
+  border: 1px solid lighten($color-primary, 15%);
+
+  @include mq(md) {
+    width: 100%;
+  }
+
+  @include mq(sm) {
+    width: 100%;
+  }
+}
+
+figure.form-control {
+  flex:1;
+  flex-direction:column;
+  justify-content:center;
+  counter-increment:count;
+}
+
+figure:after.form-control {
+  font-size:2rem;
+  content:counter(count);
+  opacity:.5;
+}
+
+
+// styles for toggle buttons
+
+.toggle {
+  display: flex;
+  position: relative;
+  width: 7.25rem;
+  height: 2.25rem; 
+  background: white;
+  text-align: center;
+  user-select: none;
+  border: 1px solid #cccccc;
+
+  &:after, &:before {
+    flex: 1;
+    text-align: center;
+    line-height: 2rem;
+  }
+
+  &.on-off {
+    &:after {
+      content: "ON";
+    }
+
+    &:before {
+      content: "OFF";
+    }
+  }
+
+  &.yes-no {
+    &:after {
+    content: "YES";
+    }
+
+    &:before {
+      content: "NO";
+    }
+  }
+}
+
+checkbox input { 
+  display: none; 
+}
+
+checkbox label {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  perspective: 1000; 
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  background: $green-potion;
+  transition: .3s;
+  width: 50%;
+  height: 2.2rem;
+  pointer-events: none;
+}
+
+input:checked + label .card { 
+  background: $red-potion; 
+}
+
+.slide .card { 
+  transform:translate(0); 
+}
+
+.slide input:checked + label .card {
+  transform: translateX(3.75rem);
+}
+
+
+// adding in additional styles for formatting if user agent is IE10
+
+html[data-useragent*='MSIE 10.0'] select.form-control, html[data-useragent*='MSIE 11.0'] select.form-control {
+    background-image: none;
+}  

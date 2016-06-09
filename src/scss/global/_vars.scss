@@ -1,0 +1,202 @@
+/*
+ __     ___    ____  ___    _    ____  _     _____ ____
+ \ \   / / \  |  _ \|_ _|  / \  | __ )| |   | ____/ ___|
+  \ \ / / _ \ | |_) || |  / _ \ |  _ \| |   |  _| \___ \
+   \ V / ___ \|  _ < | | / ___ \| |_) | |___| |___ ___) |
+    \_/_/   \_\_| \_\___/_/   \_\____/|_____|_____|____/
+
+*/
+
+/* ==========================================================================
+   Import your fonts here
+   ==========================================================================
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100,500,500italic,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+
+/* ==========================================================================
+   Typography Variables
+   ==========================================================================
+*/
+
+//global font varaibles
+
+$font-1-reset: 10em; // makes easy base-10 math
+$font-1-size: 1rem;
+$base-line-height: 1.3rem;
+
+// font weights
+
+$font-weight-xlight: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
+$font-weight-ultra: 800;
+
+//font sizes
+
+$font-size-tiny:    .85rem;
+$font-size-sm:   1.15rem;
+$font-size-md:  1.3rem;
+$font-size-lg:   1.7rem;
+$font-size-xl:  2.2rem;
+$font-size-jumbo:   3rem;
+
+//Font Family Variables
+
+//custom font family
+$font-1: 'Roboto', sans-serif;
+
+//base san-serif font family
+$font-2: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+//serif font family
+$font-3: 'Roboto Slab', serif;
+
+//often used for code blocks
+$font-4: "Courier New", Courier, monospace;
+
+$body-text: $font-1-size;
+$body-text-small: ($font-1-size *.9);
+$body-text-large: ($font-1-size *1.1);
+
+
+/* ==========================================================================
+   Headers h1,h2,h3,h4,h5,h6
+   ==========================================================================
+*/
+
+$h1-size: 2.6rem;
+$h2-size: 2.2rem;
+$h3-size: 1.6rem;
+$h4-size: 1.5rem;
+$h5-size: 1.4rem;
+$h6-size: 1.2rem;
+
+
+/* ==========================================================================
+   Spacing Units
+   ==========================================================================
+*/
+
+$base-spacing-unit: 1em;
+$half-spacing-unit: .5em;
+
+$unit-xs: 0.5em;
+$unit-sm:  0.75em;
+$unit-md: 1em;
+$unit-lg:  1.5em;
+$unit-xl: 2em;
+$unit-jumbo:  3em;
+
+
+/* ==========================================================================
+   Grid  Variables
+   ==========================================================================
+*/
+
+$grid-cols: 12;
+$gutter-width: 20px;
+$grid-max-width: 100%;
+
+
+/* ==========================================================================
+   Border Radius
+   ==========================================================================
+*/
+
+$border-radius: 0em;
+
+
+/* ==========================================================================
+   Global Color Palette
+   ==========================================================================
+*/
+
+// Generic monochrome colors
+$none:              transparent;
+$white:             #ffffff;
+$off-white:         #f4f4f4;
+$xlight-gray:       #dedede;
+$light-gray:        #bcbcbc;
+$medium-gray:       #777777;
+$dark-gray:         #444444;
+$black:             #000000;
+
+// Standard color palette
+$red-potion:        #ff372c;
+$green-potion:      #9fde00;
+$blue-potion:       #2a98c6;
+$orange-potion:     #f28f38;
+$yellow-potion:     #fff62e;
+$purple-potion:     #cabee6;
+
+// Set your global app/site variables here
+$color-primary:     $blue-potion;
+$color-secondary:   $green-potion;
+
+// Element color styling variables
+$link:              $green-potion;
+$text:              $dark-gray;
+
+
+
+/* ==========================================================================
+   Button Variables
+   ==========================================================================
+*/
+
+$button-primary: $color-primary;
+$button-secondary: $color-secondary;
+$button-red: $red-potion;
+$button-green: $green-potion;
+$button-gray: $xlight-gray;
+$button-blue: $blue-potion;
+$button-dark: $dark-gray;
+$button-orange: $orange-potion;
+$button-purple: $purple-potion;
+
+
+
+/* ==========================================================================
+   Media Query Variables
+   ==========================================================================
+*/
+
+// small range (0px --> 640px) ==> Good for mobile devices
+$sm-start:   0em;
+$sm-end:     40em;
+
+// medium range (641px --> 1024px) ==> Good for tablet devices
+$md-start:  40.063em;
+$md-end:    64em;
+
+// large range (1025px --> 1440px) ==> Good for portable & laptop devices
+$lg-start:   64.063em;
+$lg-end:     90em;
+
+// xlarge range (1441px --> 1992px)  ==> Good for large screens & desktop
+$xl-start:  90.063em;
+$xl-end:    124em;
+
+// jumbo range (1993px --> up)  ==> Good for everything above large screens & desktop
+$jumbo-start:  124.063em;
+
+// Always declare site background fallback
+$site-background: $white;
+
+
+
+/* ==========================================================================
+   Form Variables
+   ==========================================================================
+*/
+
+$form-focus: #dddddd;
+
+
+
+// If you have to support IE8
+$support-legacy: true;

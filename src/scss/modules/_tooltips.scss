@@ -1,0 +1,154 @@
+@import '../global/mixins.scss';
+@import '../global/vars.scss';
+
+/*
+  _____ ___   ___  _   _____ ___ ____  ____  
+ |_   _/ _ \ / _ \| | |_   _|_ _|  _ \/ ___| 
+   | || | | | | | | |   | |  | || |_) \___ \ 
+   | || |_| | |_| | |___| |  | ||  __/ ___) |
+   |_| \___/ \___/|_____|_| |___|_|   |____/ 
+                                                                                                                                                                                                                                                                                  
+   */
+
+.tooltip { 
+  position: relative; 
+  display: inline-block;
+
+  &:before, &:after {
+    position: absolute;
+    opacity: 0;
+    z-index: 1000000;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: transparent;
+    border: 6px solid transparent;
+    position: absolute;
+  }
+
+  &:after {
+    content: attr(tooltip-content);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    white-space: nowrap;
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+}
+
+.tooltip:hover:before, .tooltip:hover:after {
+  opacity: 1;
+}
+
+
+// Tooltip on the top
+
+.tooltip-top{ 
+
+  &:before {
+    bottom: 100%;
+    left: 50%;
+    margin: 0 0 -18px 0;
+    border-top-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &:after {
+    bottom: 100%;
+    left: 50%;
+    margin: 0 0 -6px -10px;
+  }
+
+  &:hover:before {
+    margin-bottom: -10px;
+  }
+  
+  &:hover:after {
+  margin-bottom: 2px;
+  }
+}
+
+
+// Tooltip on the right
+
+.tooltip-right { 
+
+    &:before {
+    left: 100%;
+    bottom: 50%;
+    margin: 0 0 -4px -8px;
+    border-right-color: rgba(0,0,0,0.8);
+  }
+
+  &:after {
+    left: 100%;
+    bottom: 50%;
+    margin: 0 0 -13px 4px;
+  }
+
+  &:hover:before {
+    margin: 0 0 -4px -0;
+  }
+
+  &:hover:after {
+    margin: 0 0 -13px 12px;
+  }
+}
+
+
+// Tooltip on the bottom
+
+.tooltip-bottom {
+  
+  &:before {
+    top: 100%;
+    left: 50%;
+    margin: -14px 0 0 0;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &:after {
+    top: 100%;
+    left: 50%;
+    margin: -2px 0 0 -10px;
+  }
+
+  &:hover:before {
+    margin-top: -6px;
+  }
+
+  &:hover:after {
+    margin-top: 6px;
+  }
+}
+
+
+// Tooltip on the left
+
+.tooltip-left {
+
+  &::before {
+    right: 100%;
+    bottom: 50%;
+    margin: 0 -8px -4px 0;
+    border-left-color: rgba(0,0,0,0.8);
+  }
+
+  &:after {
+    right: 100%;
+    bottom: 50%;
+    margin: 0 4px -13px 0;
+  }
+
+  &:hover:before {
+    margin: 0 0 -4px 0;
+  }
+
+  &:hover:after {
+    margin: 0 12px -13px 0;
+  }
+}

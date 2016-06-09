@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+Created by 
+Thomas Wicker
+Aurora, Colorado
+twitter: @thomasjwicker 
+http://www.thomaswicker.com
+
+
+
+# THANKS
+
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr

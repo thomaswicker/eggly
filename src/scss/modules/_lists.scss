@@ -1,0 +1,41 @@
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+/*
+  _     ___ ____ _____ ____  
+ | |   |_ _/ ___|_   _/ ___| 
+ | |    | |\___ \ | | \___ \ 
+ | |___ | | ___) || |  ___) |
+ |_____|___|____/ |_| |____/ 
+                                                                                                                                                                                                                                          
+*/
+
+
+/* ==========================================================================
+   Number Lists
+   ========================================================================== 
+*/
+
+.numbered-list {
+    list-style-type: decimal;
+}
+
+
+/* ==========================================================================
+   Bullet Lists
+   ========================================================================== 
+*/
+
+.bulleted-list {
+    @include font($font: $font-1, $style: normal, $size: .95rem, $weight: normal);
+    list-style: disc;
+    margin: 0em 0em 1.7em 0em;
+    line-height: 1.2rem;
+    padding-left: 20px;
+}
+
+.bulleted-list_link{
+    display: block;
+    padding: $base-spacing-unit;
+    margin: $base-spacing-unit;
+}

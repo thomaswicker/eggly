@@ -1,0 +1,79 @@
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+/*
+  ____   _    _   _ _____ _     ____  
+ |  _ \ / \  | \ | | ____| |   / ___| 
+ | |_) / _ \ |  \| |  _| | |   \___ \ 
+ |  __/ ___ \| |\  | |___| |___ ___) |
+ |_| /_/   \_\_| \_|_____|_____|____/ 
+                                                                                                                                                                                                                                                                                     
+ */
+
+/* ==========================================================================
+   Styling for Potion Panels
+   ========================================================================== 
+*/
+
+ .panel {
+  width: 100%;
+  min-height: 50px;
+  padding: 1em 1.2em 1em 1.2em;
+  margin-bottom: 1em;
+  background-color: lighten($light-gray, 38%);
+  border: 1px solid $dark-gray;
+  color: $dark-gray;
+  font-family: $font-2;
+  font-size: 1rem;
+  line-height: 1.4rem;
+
+  span {
+    font-weight: bold;
+  }
+
+  &.panel-default {
+    background-color: lighten($light-gray, 18%);
+    border: 1px solid $medium-gray;
+    color: $dark-gray;
+  }
+
+  &.panel-callout {
+    background-color: lighten($blue-potion, 38%);
+    border: 1px solid darken($blue-potion, 10%);
+    color: darken($blue-potion, 20%);
+  }
+
+  &.panel-basic {
+    background-color: $white;
+    border: 1px solid $dark-gray;
+    color: $dark-gray;
+  }
+
+  &.panel-thin {
+    background-color: $white;
+    border: 1px solid $xlight-gray;
+    color: $dark-gray;
+  }
+
+  &.panel-shadow {
+    border: none;
+    transform: translateZ(0);
+    transition: box-shadow 0.25s ease-in;
+    box-shadow: 0 1px 2px #999;   
+  }
+}
+
+
+// adding in additional styles for formatting if user agent is IE10
+
+html[data-useragent*='MSIE 10.0'] .panel {
+  @include flexbox;
+  flex-flow: row wrap;  
+  letter-spacing: normal;
+  
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}  

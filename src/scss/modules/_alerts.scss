@@ -1,0 +1,98 @@
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+/*
+     _    _     _____ ____ _____ ____  
+    / \  | |   | ____|  _ \_   _/ ___| 
+   / _ \ | |   |  _| | |_) || | \___ \ 
+  / ___ \| |___| |___|  _ < | |  ___) |
+ /_/   \_\_____|_____|_| \_\|_| |____/ 
+                                                                                                                                                                                     
+*/
+
+
+/* ==========================================================================
+   Styling for Alerts
+   ========================================================================== 
+*/
+
+.alert {
+  width: 100%;
+  padding: 1em 1.2em 1em 1.2em;
+  margin-bottom: 1em;
+  background: lighten($color-primary, 22%);
+  border: 1px solid $color-primary;
+  display: block;
+  transition: background linear 0.25s;
+
+  span {
+    font-weight: bold;
+  }
+
+  &.alert-blue {
+    background-color: lighten($blue-potion, 38%);
+    border: 1px solid $blue-potion;
+  }
+
+  &.alert-red {
+    background-color: lighten($red-potion, 32%);
+    border: 1px solid $red-potion;
+  }
+
+  &.alert-green {
+    background-color: lighten($green-potion, 46%);
+    border: 1px solid darken($green-potion, 10%)
+  }
+
+  &.alert-orange {
+    background-color: lighten($orange-potion, 31%);
+    border: 1px solid $orange-potion;
+  }
+
+  &.alert-yellow {
+    background-color: lighten($yellow-potion, 33%);
+    border: 1px solid darken($yellow-potion, 15%)
+  }
+
+  &.alert-purple {
+    background-color: lighten($purple-potion, 10%);
+    border: 1px solid darken($purple-potion, 10%);
+  }
+
+  .close-alert {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-weight: bold;
+    color: $medium-gray;
+    padding: 3px 6px 3px 6px;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+      cursor: pointer;
+      @include border-radius(50%);
+    }
+  }
+}
+
+.hidden-alert {
+  background: transparent;
+  display: none;
+}
+
+
+// adding in additional styles for formatting if user agent is IE10
+
+html[data-useragent*='MSIE 10.0'] .alert {
+  @include flexbox;
+  flex-flow: row wrap;  
+  letter-spacing: normal;
+  
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}  
+

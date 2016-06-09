@@ -1,0 +1,1 @@
+// Main application.js file

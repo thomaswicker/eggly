@@ -1,0 +1,108 @@
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+/*
+     _    ____ ____ ___  ____  ____ ___ ___  _   _ ____  
+    / \  / ___/ ___/ _ \|  _ \|  _ \_ _/ _ \| \ | / ___| 
+   / _ \| |  | |  | | | | |_) | | | | | | | |  \| \___ \ 
+  / ___ \ |__| |__| |_| |  _ <| |_| | | |_| | |\  |___) |
+ /_/   \_\____\____\___/|_| \_\____/___\___/|_| \_|____/ 
+                                                                                                                                                                                                                                            
+*/
+
+
+/* ==========================================================================
+   Styling for Vanishing Content
+   ========================================================================== 
+*/
+
+.vanish-toggle {
+  cursor: pointer;
+}
+
+.vanish {
+  margin-top: .2em;
+  padding: 0em 1em 0em 1em;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  background: lighten($color-primary, 28%);
+  color: $dark-gray;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  max-height: 0px;
+
+  &.open {
+    padding: 1em 1.2em 1em 1.2em;
+    max-height: 400px;
+  }
+}
+
+
+// adding in additional styles for formatting if user agent is IE10
+
+html[data-useragent*='MSIE 10.0'] .vanish {
+  @include flexbox;
+  flex-flow: row wrap;  
+  letter-spacing: normal;
+  
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}  
+
+/* ==========================================================================
+   Styling for Standard Accordion Content
+   ========================================================================== 
+*/
+
+.accordion {
+  @include flexbox;
+  flex-flow: row wrap;    
+  background: $light-gray;
+  width: 100%;
+  border: 1px solid $medium-gray;
+
+  &:last-child  {
+    border-bottom: none;
+  }
+
+  .accordion-title {
+    @include flexbox;
+    flex-flow: row wrap;      
+    width: 100%;
+    background-color: lighten($medium-gray, 38%);
+    transition: background-color 0.9s ease;
+    color: $dark-gray;
+    font-family: $font-2;
+    padding: 1.1em 1.1em 1.1em 1.1em;
+    cursor: pointer;
+    border-bottom: 1px solid $dark-gray;
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+
+  .accordion-content {
+    width: 100%;
+    display: none;
+    background-color: $white;
+    color: $dark-gray;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding: 1em 1em 1em 1em;
+  }
+
+  .active {
+    display: block;
+    background-color: red;
+  }
+
+  .active-accordion-title {
+    background-color: $medium-gray !important;
+    color: $white;
+  }
+}

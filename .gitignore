@@ -1,0 +1,15 @@
+# Ignore files
+*.codekit
+*.rb
+AIs/
+AIs/*.ai
+bower_components/
+node_modules/
+SASS/
+*.psd
+*.docx
+*.doc
+*.sublime-project
+*.sublime-workspace
+*.DS_Store
+*.sass-cache

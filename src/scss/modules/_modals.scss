@@ -1,0 +1,120 @@
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+// @if $use-buttons == true{
+
+/*
+  __  __    _    ____ ___ ____   __  __  ___  ____    _    _     ____  
+ |  \/  |  / \  / ___|_ _/ ___| |  \/  |/ _ \|  _ \  / \  | |   / ___| 
+ | |\/| | / _ \| |  _ | | |     | |\/| | | | | | | |/ _ \ | |   \___ \ 
+ | |  | |/ ___ \ |_| || | |___  | |  | | |_| | |_| / ___ \| |___ ___) |
+ |_|  |_/_/   \_\____|___\____| |_|  |_|\___/|____/_/   \_\_____|____/ 
+                                                                                                                                                                                                                                                                                                                                                                                             
+*/
+
+.open-modal-btn {
+  min-width: 100px;
+  color: #fff;
+  border-radius: 0px;
+  border: 0;
+  cursor: pointer;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  width: 30px;
+  height: 30px;
+  background: $black;
+  color: $white;
+  cursor: pointer;
+  border: 0;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+
+  &:hover{
+    background: lighten($black, 20%);
+  }
+
+  span {
+    color: $white;
+  }
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transition: .9s;
+}
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  min-height: 300px;
+  margin-top: 5%;
+  background-color: white;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease-out;
+  transform: translateY(180px);
+  overflow: hidden; 
+
+  @include mq(sm) {
+    width: 88%;
+    max-height: 400px;
+  }
+
+  @include mq(md) {
+    width: 70%;
+  }
+
+  @include mq(lg) {
+    width: 60%;
+  }
+}
+
+.modal-title {
+  margin-top: 15px;
+  padding: 20px 40px 10px 40px;
+  font-family: $font-2;
+  font-size: 2rem !important;
+}
+
+.modal-body {
+  padding: 0px 40px 40px 40px;
+  @include font($font: $font-1, $style: normal, $size: 1rem, $weight: normal);
+  line-height: 1.3rem;
+  background-color: white;
+
+  @include mq(sm) {
+    max-height: 300px;
+    overflow: scroll;
+    padding: 0px 40px 40px 40px;
+  }
+}
+
+.active-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.active-modal + .modal{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}

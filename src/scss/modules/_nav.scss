@@ -1,0 +1,273 @@
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+/*
+  _   _    ___     _____ ____    _  _____ ___ ___  _   _ 
+ | \ | |  / \ \   / /_ _/ ___|  / \|_   _|_ _/ _ \| \ | |
+ |  \| | / _ \ \ / / | | |  _  / _ \ | |  | | | | |  \| |
+ | |\  |/ ___ \ V /  | | |_| |/ ___ \| |  | | |_| | |\  |
+ |_| \_/_/   \_\_/  |___\____/_/   \_\_| |___\___/|_| \_|
+                                                                                                                                                                                                                                                                               
+*/
+
+ .clearfix:before,
+ .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.nav-header {
+  background: rgba(darken($dark-gray, 10%), 0.9);
+  width: 100%;
+  height: 46px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid $color-primary;
+  z-index: 101;
+}
+
+.nav-header-inner {
+  background: rgba(darken($dark-gray, 10%), 0.9);
+  width: 100%;
+  height: 46px;
+  float: left;
+  border-bottom: 3px solid $color-primary;
+  z-index: 101;
+}
+
+.brand {
+  position: absolute;
+  top: 7px;
+  left: 17px;
+  width: 115px;
+  height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav {
+  height: auto;
+}
+
+.active {
+  background-color: $white;
+  color: $dark-gray !important;
+  font-weight: $font-weight-bold;
+}
+
+.menu-icon {
+  display: none;
+  @include border-box;
+
+  @include mq(sm) {
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 13px;
+    width: 20%;
+    height: 30px;
+    padding: 7px 0px 0px 0px;
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    text-decoration: none;
+    color: $color-primary;
+    text-transform: uppercase;
+    text-align: center;
+
+    span {
+      float: none;
+      width: auto;
+      margin: 0px;
+      border: none;
+    }
+
+    .menu-btn {
+      display: block;
+    }
+
+    .open-btn {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      color: $white;
+
+      span {
+        border: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .open-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+.toggled {
+  background-color: $black !important;
+}
+
+.magic-nav {
+  list-style: none;
+
+  ul {
+    float: right;
+    display: block;
+
+    @include mq(jumbo) {
+        display: block !important;
+    }
+
+    @include mq(xl) {
+        display: block !important;
+    }
+
+    @include mq(lg) {
+        display: block !important;
+    }
+
+    @include mq(md) {
+        display: block !important;
+    }
+    
+    @include mq(sm) {
+      display: none;
+      background: rgba($dark-gray, 0.9);
+      position: relative;
+      right: 0px;
+      top: 45px;
+      width: 100%;
+      border-bottom: 4px solid $color-primary;
+    }
+  }
+
+  ul li {
+    float: left;
+    padding: 0px 0px 0px 0px;
+    border-right: 1px solid $medium-gray;
+    transition: background 0.3s ease;
+    display: block;
+
+    @include mq(md) {
+      padding: 0px 0px 0px 0px;
+    }
+
+    @include mq(sm) {
+      width: 100%;
+      margin: 0px;
+      border-bottom: 1px solid lighten($dark-gray, 20%);
+      background-color: rgba(darken($dark-gray, 15%), 0.95);
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: darken($medium-gray, 10%);
+      cursor: pointer;
+      transition: background 0.3s ease;
+ 
+    }
+
+    a {
+      display: block;
+      color: $white;
+      padding: 15px 20px 15px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: $font-2;
+      font-size: .75rem;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+      
+      @include mq(sm) {
+         text-decoration: none;
+         display: block;
+         width: 100%;
+         border-right: none;
+         font-size: 1.1rem;
+         padding: 20px 0px 20px 0px;
+         min-height: 50px;
+
+        .active {
+          padding: 20px 0px 20px 0px;
+        }
+      }
+    }
+  }
+}
+
+//Side vertical nav box
+
+.nav-box-vertical {
+  border: 1px solid $light-gray;
+  background-color: $white;
+  font-family: $font-2;
+
+  li {
+    border-bottom: 1px solid $light-gray;
+    padding: 10px 15px 10px 15px;
+    color: $medium-gray;
+    font-weight: $font-weight-light;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($color-primary, 20%);
+      color: $white;
+    }
+  }
+
+  li:nth-child(even) {
+    background-color: lighten($light-gray, 24%);
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($color-primary, 20%);
+      color: $white;
+    }  
+  }
+
+  li.nav-box-header {
+    border-bottom: 2px solid $dark-gray;
+    padding: 10px 15px 10px 15px;
+    font-size: .95rem;
+    font-weight: $font-weight-light;
+    color: $white;
+    background-color: darken($dark-gray, 5%);
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      cursor: default;
+      color: $white;
+      background-color: darken($dark-gray, 5%);
+    }
+  }
+
+  .active-sidebar-link {
+    transition: background-color 0.5s ease;
+    background-color: lighten($color-secondary, 20%) !important;
+    color: $dark-gray;
+
+    &:hover {
+      color: $dark-gray !important;
+      cursor: default !important;
+    }
+  }
+}
+
