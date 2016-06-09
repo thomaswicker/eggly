@@ -72,3 +72,23 @@
 @import "modules/tooltips";
 
 /* ## Framework Only - These can be deleted for your project ## */
+
+
+.eggly-left-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  padding-top: 3rem;
+  background-color: #444;
+  color: white;
+}
+
+.eggly-right-body {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: calc(100%-300px);
+  padding-top: 3rem;
+}

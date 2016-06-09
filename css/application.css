@@ -2411,14 +2411,11 @@ html[data-useragent*='MSIE 10.0'] .alert {
   display: block;
   min-width: 3rem;
   padding: 1rem 1.25rem;
-  border: 2px solid #2a98c6;
   border-radius: 0;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
-  background: #2a98c6;
-  color: #ffffff;
   cursor: pointer;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
@@ -2428,187 +2425,6 @@ html[data-useragent*='MSIE 10.0'] .alert {
   @media only screen and (max-width: 40em) {
     .btn, .button, button {
       width: 100%; } }
-  .btn:hover, .button:hover, button:hover {
-    border: 2px solid #1d6887;
-    background: #1d6887; }
-  .btn.btn-primary, .button.btn-primary, button.btn-primary {
-    border: 2px solid #2a98c6;
-    background: #2a98c6;
-    color: #ffffff; }
-    .btn.btn-primary:hover, .button.btn-primary:hover, button.btn-primary:hover {
-      border: 2px solid #1d6887;
-      background: #1d6887; }
-  .btn.btn-secondary, .button.btn-secondary, button.btn-secondary {
-    border: 2px solid #9fde00;
-    background: #9fde00;
-    color: #ffffff; }
-    .btn.btn-secondary:hover, .button.btn-secondary:hover, button.btn-secondary:hover {
-      border: 2px solid #689200;
-      background: #689200; }
-  .btn.btn-red, .button.btn-red, button.btn-red {
-    border: 2px solid #ff372c;
-    background: #ff372c;
-    color: #ffffff; }
-    .btn.btn-red:hover, .button.btn-red:hover, button.btn-red:hover {
-      border: 2px solid #df0c00;
-      background: #df0c00; }
-  .btn.btn-green, .button.btn-green, button.btn-green {
-    border: 2px solid #9fde00;
-    background: #9fde00;
-    color: #ffffff; }
-    .btn.btn-green:hover, .button.btn-green:hover, button.btn-green:hover {
-      border: 2px solid #689200;
-      background: #689200; }
-  .btn.btn-blue, .button.btn-blue, button.btn-blue {
-    border: 2px solid #2a98c6;
-    background: #2a98c6;
-    color: #ffffff; }
-    .btn.btn-blue:hover, .button.btn-blue:hover, button.btn-blue:hover {
-      border: 2px solid #1d6887;
-      background: #1d6887; }
-  .btn.btn-orange, .button.btn-orange, button.btn-orange {
-    border: 2px solid #f28f38;
-    background: #f28f38;
-    color: #ffffff; }
-    .btn.btn-orange:hover, .button.btn-orange:hover, button.btn-orange:hover {
-      border: 2px solid #d0680e;
-      background: #d0680e; }
-  .btn.btn-purple, .button.btn-purple, button.btn-purple {
-    border: 2px solid #cabee6;
-    background: #cabee6;
-    color: #ffffff; }
-    .btn.btn-purple:hover, .button.btn-purple:hover, button.btn-purple:hover {
-      border: 2px solid #9d87d1;
-      background: #9d87d1; }
-  .btn.btn-dark, .button.btn-dark, button.btn-dark {
-    border: 2px solid #444444;
-    background: #444444;
-    color: #ffffff; }
-    .btn.btn-dark:hover, .button.btn-dark:hover, button.btn-dark:hover {
-      border: 2px solid #1e1e1e;
-      background: #1e1e1e; }
-  .btn.btn-gray, .button.btn-gray, button.btn-gray {
-    border: 2px solid #bcbcbc;
-    background: #bcbcbc;
-    color: #ffffff; }
-    .btn.btn-gray:hover, .button.btn-gray:hover, button.btn-gray:hover {
-      border: 2px solid #969696;
-      background: #969696; }
-  .btn:disabled, .btn.js-disabled, .btn.btn-disabled, .button:disabled, .button.js-disabled, .button.btn-disabled, button:disabled, button.js-disabled, button.btn-disabled {
-    cursor: default;
-    background: #bcbcbc !important;
-    color: #f4f4f4;
-    pointer-events: none; }
-  .btn.btn-small, .button.btn-small, button.btn-small {
-    min-width: 0;
-    padding: .75rem 1.25rem;
-    font-family: "Roboto", sans-serif, Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.85rem; }
-  .btn.btn-mini, .button.btn-mini, button.btn-mini {
-    min-width: 0;
-    padding: .5rem .75rem;
-    font-family: "Roboto", sans-serif, Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.75rem; }
-  .btn.btn-full, .button.btn-full, button.btn-full {
-    display: block;
-    width: 100%;
-    text-align: center; }
-  .btn.btn-wide, .button.btn-wide, button.btn-wide {
-    min-width: 0;
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
-    font-family: "Roboto", sans-serif, Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.85rem; }
-
-a.btn {
-  text-decoration: none;
-  padding-top: 1em;
-  padding-right: 1.25em;
-  padding-bottom: 1em;
-  padding-left: 1.25em; }
-
-/* ==========================================================================
-   Styling for Outlined Buttons
-   ==========================================================================
-*/
-.btn-outline {
-  background: #ffffff;
-  border: 2px solid #2a98c6;
-  color: #2a98c6; }
-  .btn-outline:hover {
-    border: 2px solid #1d6887;
-    background-color: #1d6887;
-    color: #ffffff; }
-  .btn-outline.btn-secondary {
-    border: 2px solid #9fde00;
-    color: #9fde00;
-    background-color: #ffffff; }
-    .btn-outline.btn-secondary:hover {
-      border: 2px solid #689200;
-      background-color: #689200;
-      color: #ffffff; }
-  .btn-outline.btn-red {
-    border: 2px solid #ff372c;
-    color: #ff372c;
-    background-color: #ffffff; }
-    .btn-outline.btn-red:hover {
-      border: 2px solid #df0c00;
-      background-color: #df0c00;
-      color: #ffffff; }
-  .btn-outline.btn-green {
-    border: 2px solid #9fde00;
-    color: #9fde00;
-    background-color: #ffffff; }
-    .btn-outline.btn-green:hover {
-      border: 2px solid #689200;
-      background-color: #689200;
-      color: #ffffff; }
-  .btn-outline.btn-blue {
-    border: 2px solid #2a98c6;
-    color: #2a98c6;
-    background-color: #ffffff; }
-    .btn-outline.btn-blue:hover {
-      border: 2px solid #1d6887;
-      background-color: #1d6887;
-      color: #ffffff; }
-  .btn-outline.btn-orange {
-    border: 2px solid #f28f38;
-    color: #f28f38;
-    background-color: #ffffff; }
-    .btn-outline.btn-orange:hover {
-      border: 2px solid #d0680e;
-      background-color: #d0680e;
-      color: #ffffff; }
-  .btn-outline.btn-purple {
-    border: 2px solid #cabee6;
-    color: #cabee6;
-    background-color: #ffffff; }
-    .btn-outline.btn-purple:hover {
-      border: 2px solid #9d87d1;
-      background-color: #9d87d1;
-      color: #ffffff; }
-  .btn-outline.btn-dark {
-    border: 2px solid #444444;
-    color: #444444;
-    background-color: #ffffff; }
-    .btn-outline.btn-dark:hover {
-      border: 2px solid #1e1e1e;
-      background-color: #1e1e1e;
-      color: #ffffff; }
-  .btn-outline.btn-gray {
-    border: 2px solid #bcbcbc;
-    color: #bcbcbc;
-    background-color: #ffffff; }
-    .btn-outline.btn-gray:hover {
-      border: 2px solid #969696;
-      background-color: #969696;
-      color: #ffffff; }
 
 /*
  __     ___    ____  ___    _    ____  _     _____ ____
@@ -6453,3 +6269,19 @@ html[data-useragent*='MSIE 10.0'] .panel {
   margin: 0 12px -13px 0; }
 
 /* ## Framework Only - These can be deleted for your project ## */
+.eggly-left-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  padding-top: 3rem;
+  background-color: #444;
+  color: white; }
+
+.eggly-right-body {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: calc(100%-300px);
+  padding-top: 3rem; }

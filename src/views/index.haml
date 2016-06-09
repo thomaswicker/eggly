@@ -4,9 +4,25 @@
     %meta{:charset => "utf-8"}
       %title Eggly Tutorial from Egghead.io
       %link{:charset => "utf-8", :href => "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css", :media => "screen", :rel => "stylesheet", :title => "no title"}
+      %link{:charset => "utf-8", :href => "css/application.css", :media => "screen", :rel => "stylesheet", :title => "no title"}
   %body{"ng-controller" => "MainCtrl"}
     %h1
       {{hello}}
+    .row
+      .medium-3.columns.eggly-left-sidebar
+        %h2 Categories
+        .row
+          %ul.nav.nav-sidebar
+            %li.medium-12.columns{ "ng-repeat" => "category in categories" }
+              %a{ href: "" }
+                {{category.name}}
+      .medium-9.columns.eggly-right-body
+        %section.medium-12.columns{ "ng-repeat" => "bookmark in bookmarks"}
+          %button.close.button{type: "button"} &times;
+          %button.btn.button.success{type: "button"} Bookmark
+          %a{ href: "{{bookmark.url}}" }
+            {{bookmark.title}}
+
     / SCRIPTS
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js"}
