@@ -17,7 +17,7 @@
         <div class='row'>
           <ul class='nav nav-sidebar'>
             <li class='medium-12 columns' ng-repeat='category in categories'>
-              <a href=''>
+              <a ng-click='setCurrentCategory(category)'>
                 {{category.name}}
               </a>
             </li>
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class='medium-9 columns eggly-right-body'>
-        <section class='medium-12 columns' ng-repeat='bookmark in bookmarks'>
+        <section class='medium-12 columns' ng-repeat='bookmark in bookmarks | filter:{category:currentCategory.name}'>
           <button class='close button' type='button'>&times;</button>
           <button class='btn button success' type='button'>Bookmark</button>
           <a href='{{bookmark.url}}'>

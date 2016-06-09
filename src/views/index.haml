@@ -14,10 +14,10 @@
         .row
           %ul.nav.nav-sidebar
             %li.medium-12.columns{ "ng-repeat" => "category in categories" }
-              %a{ href: "" }
+              %a{ "ng-click" => "setCurrentCategory(category)" }
                 {{category.name}}
       .medium-9.columns.eggly-right-body
-        %section.medium-12.columns{ "ng-repeat" => "bookmark in bookmarks"}
+        %section.medium-12.columns{ "ng-repeat" => "bookmark in bookmarks | filter:{category:currentCategory.name}"}
           %button.close.button{type: "button"} &times;
           %button.btn.button.success{type: "button"} Bookmark
           %a{ href: "{{bookmark.url}}" }

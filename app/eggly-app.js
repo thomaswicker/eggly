@@ -21,5 +21,15 @@ angular.module('Eggly', [
       {"id": 7, "title": "Wimp", "url": "http://wimp.com", "category": "Humor" },
       {"id": 8, "title": "Dump", "url": "http://dump.com", "category": "Humor" }
     ];
+
+    $scope.currentCategory = null;
+
+    function setCurrentCategory(category) {
+      $scope.currentCategory = category;
+    }
+
+    // Making setCurrentCategory visible to the view or 'public'
+    // Otherwise the setCurrentCategory function is not available publicly
+    $scope.setCurrentCategory = setCurrentCategory;
 })
 ;
